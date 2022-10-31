@@ -12,8 +12,7 @@
 - Git
 
 ## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+N/A
 
 
 ## Getting Started
@@ -30,19 +29,6 @@ In this project, you will start building your school library app. In this initia
 - Open the terminal
 - Run `bundle install`
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
@@ -52,11 +38,6 @@ In this project, you will start building your school library app. In this initia
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
