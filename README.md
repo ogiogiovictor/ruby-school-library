@@ -2,14 +2,14 @@
 
 # Project Name
 
-> Description the project.
-
+> OOP school library: add Person, Student and Teacher classes
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Robocop
+- Linters
+- Git
 
 ## Live Demo (if available)
 
@@ -18,11 +18,17 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+In this project, you will start building your school library app. In this initial step, you will implement the classes to represent students and teachers.
 
 
-To get a local copy up and running follow these simple example steps.
+##To get a local copy up and running follow these simple example steps.
+- Click the Code button in the top right corner
+- Download ZIP
+- Unzip the file: morse-code-ruby.zip
+- Open the folder: morse-code-ruby
+- Add the folder to your VSCode workspace
+- Open the terminal
+- Run `bundle install`
 
 ### Prerequisites
 
