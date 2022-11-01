@@ -1,6 +1,6 @@
 class Person
-  # attr_reader :id
-  # attr_accessor :name, :age, :parent_permission, :type
+  attr_accessor :name, :age
+  attr_reader :id
 
   def initialize(id, age, name = 'Unknown', parent_permission: true)
     super()
@@ -9,8 +9,6 @@ class Person
     @age = age
     @parent_permission = parent_permission
   end
-
-  attr_reader :id, :name, :age
 
   # private
   def of_age?
