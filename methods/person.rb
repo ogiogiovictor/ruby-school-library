@@ -13,12 +13,10 @@ class Person
   # private
   def of_age?
     @age >= 18
-    # true if @age >= 18
   end
 
   def can_use_services?
     of_age? || @parent_permission
-    # true if is_of_age? || @parent_permission
   end
 
   def setname(name)
@@ -30,6 +28,5 @@ class Person
   end
 end
 
-# Path: student.rb
 person = Person.new(1, 6, 'John')
 p person.can_use_services?

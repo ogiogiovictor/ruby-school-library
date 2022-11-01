@@ -15,6 +15,5 @@ class Student < Person
   end
 end
 
-# Path: main.rb
 student = Student.new(15, 17, 'Daniel', parent_permission: true, classroom: 'Math')
 p student.play_hooky
