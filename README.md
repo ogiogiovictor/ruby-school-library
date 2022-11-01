@@ -11,9 +11,6 @@
 - Linters
 - Git
 
-## Live Demo (if available)
-N/A
-
 
 ## Getting Started
 
