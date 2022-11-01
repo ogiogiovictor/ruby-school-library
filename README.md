@@ -27,9 +27,7 @@ In this project, you will start building your school library app. In this initia
 - Run `bundle install`
 
 
-## Authors
-
-👤 **Author1**
+## Author
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
