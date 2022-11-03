@@ -28,7 +28,7 @@ class Other
     end
   
     def altered()
-      puts "CHILD, BEFORE OTHER altered()"
+      puts "CHILD, BEFORE OTHER altered"
       @other.altered()
       puts "CHILD, AFTER OTHER altered()"
     end

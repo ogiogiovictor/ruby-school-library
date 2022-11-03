@@ -10,7 +10,6 @@
 - Robocop
 - Linters
 - Git
-- Github
 
 
 ## Getting Started
