@@ -36,7 +36,7 @@ class Person < Nameable
     @name
   end
   
-  # Create the has-many side of Person and Rental (a person has many rentals).
+  # Has-many side of Person and Rental (a person has many rentals).
   def add_rental(rental)
     @rental.push(rental) # Add the rental to the person's rentals
     person.rental = self # Add rental to the person rental array
