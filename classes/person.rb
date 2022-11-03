@@ -1,7 +1,6 @@
 require_relative './decorator/nameable'
 
 class Person < Nameable
-
   attr_accessor :name, :age, :rental
   attr_reader :id
 
@@ -15,6 +14,7 @@ class Person < Nameable
   end
 
   private
+  
   def of_age?
     @age >= 18
   end
