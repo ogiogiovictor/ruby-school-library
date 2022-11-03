@@ -17,7 +17,7 @@ end
 
 student = Student.new(35, 17, 'Daniel', parent_permission: true, classroom: 'Math')
 p student.play_hooky
-p student.setname("daniel")
+p student.setname('daniel')
 persons = Person.new(1, 26, 'John')
 p persons
 p persons.can_use_services?
