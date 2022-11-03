@@ -34,7 +34,6 @@ class Person < Nameable
   def correct_name
     @name
   end
-  
   # Has-many side of Person and Rental (a person has many rentals).
   def add_rental(rental)
     @rental.push(rental) # Add the rental to the person's rentals
