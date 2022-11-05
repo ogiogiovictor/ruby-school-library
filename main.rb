@@ -11,43 +11,41 @@ def choose_options
   puts '7 - Exit'
 end
 
-
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/MethodLength
 def main
-    app = App.new
-    #system('cls')
-    puts 'Welcome to School Library App!'
-    puts "\n"
+  app = App.new
+  puts 'Welcome to School Library App!'
+  puts "\n"
 
-    while true
-        choose_options
-        option = gets.chomp
+  loop do
+    choose_options
+    option = gets.chomp
 
-        case option
-        when '1'
-            app.list_books(option)
-        when '2'
-            app.list_all_persons(option)
-        when '3'
-            app.create_person
-        when '4'
-            app.create_book
-        when '5'
-            app.create_rental
-        when '6'
-            app.list_all_rentals_for_person_id
-        when '7'
-            puts 'Thank you for using this app!'
-            break
-        else
-            puts 'That is not a valid option'
-            sleep(1)
-        end
-
-        puts "\n"
+    case option
+    when '1'
+      app.list_books(option)
+    when '2'
+      app.list_all_persons(option)
+    when '3'
+      app.create_person
+    when '4'
+      app.create_book
+    when '5'
+      app.create_rental
+    when '6'
+      app.list_all_rentals_for_person_id
+    when '7'
+      puts 'Thank you for using this app!'
+      break
+    else
+      puts 'That is not a valid option'
+      sleep(1)
     end
-
-
-
+    puts "\n"
+  end
 end
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/MethodLength
 
 main
