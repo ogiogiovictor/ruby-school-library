@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Ruby School Library
 
 > OOP school library: add Person, Student and Teacher classes
 
