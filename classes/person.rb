@@ -1,16 +1,17 @@
-require_relative './decorator/nameable'
+require_relative '../decorator/nameable'
 
 class Person < Nameable
-  attr_accessor :name, :age, :rental
+  attr_accessor :name, :age, :rentals, :parent_permission
   attr_reader :id
 
-  def initialize(id, age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', specialization = 'unknown', parent_permission: true)
     super()
-    @id = id
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @rental = []
+    @specialization = specialization
+    @id = Random.rand(1..1000)
+    @rentals = []
   end
 
   private
@@ -36,13 +37,17 @@ class Person < Nameable
   end
 
   # Has-many side of Person and Rental (a person has many rentals).
-  def add_rental(rental)
-    @rental.push(rental) # Add the rental to the person's rentals
-    person.rental = self # Add rental to the person rental array
+  # def add_rental(rental)
+  # @rentals.push(rental) # Add the rental to the person's rentals
+  # person.rental = self # Add rental to the person rental array
+  # end
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
 end
 
 # person = Person.new(1, 26, 'John')
-person = Person.new(22, 15, 'maximilianus')
+# person = Person.new(22, 15, 'maximilianus')
 # p person.can_use_services?
-p person.correct_name
+# p person.correct_name
