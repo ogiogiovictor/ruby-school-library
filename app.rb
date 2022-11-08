@@ -120,26 +120,12 @@ def recover_data(file)
   JSON.parse(json, create_additions: true)
 end
 
-store0 = Book.new('this is ethiopia', 'tadesse')
-json0 = JSON.generate(store0)
-obj0 = JSON.parse(json0)
-ruby1 = JSON.parse(json0, create_additions: true)
+# store0 = Book.new('this is ethiopia', 'tadesse')
+# json0 = JSON.generate(store0)
+# obj0 = JSON.parse(json0)
+# ruby1 = JSON.parse(json0, create_additions: true)
 
-store1 = Person.new(12, 'Marck', parent_permission: true)
-json1 = JSON.generate(store1)
-obj1 = JSON.parse(json1)
-ruby2 = JSON.parse(json1, create_additions: true)
-
-display = <<EOT
-  Generated JSON:
-    Without custom addition:  #{json0} (#{json0.class})
-    Without custom addition:  #{json1} (#{json1.class})
-    With addition:     #{json0} (#{json0.class})
-    With addition:     #{json1} (#{json1.class})
-  Parsed JSON:
-    Without custom addition:  #{obj0.inspect} (#{obj0.class})
-    With addition:     #{ruby1.inspect} (#{ruby1.class})
-    Without custom addition:  #{obj1.inspect} (#{obj1.class})
-    With addition:     #{ruby2.inspect} (#{ruby2.class})
-EOT
-puts display
+# store1 = Person.new(12, 'Marck', parent_permission: true)
+# json1 = JSON.generate(store1)
+# obj1 = JSON.parse(json1)
+# ruby2 = JSON.parse(json1, create_additions: true)
