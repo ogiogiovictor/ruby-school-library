@@ -120,12 +120,6 @@ def recover_data(file)
   JSON.parse(json, create_additions: true)
 end
 
-# store0 = Book.new('this is ethiopia', 'tadesse')
-# json0 = JSON.generate(store0)
-# obj0 = JSON.parse(json0)
-# ruby1 = JSON.parse(json0, create_additions: true)
-
-# store1 = Person.new(12, 'Marck', parent_permission: true)
-# json1 = JSON.generate(store1)
-# obj1 = JSON.parse(json1)
-# ruby2 = JSON.parse(json1, create_additions: true)
+@books = recover_data('books')
+@people = recover_data('people')
+@rentals = recover_data('rentals')
