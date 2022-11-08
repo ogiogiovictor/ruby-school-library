@@ -1,13 +1,15 @@
+require 'json'
 require_relative './associations/book'
 require_relative './classes/person'
 require_relative './classes/student'
 require_relative './classes/teacher'
+require_relative './preserve_data'
 
 class App
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @books = [] if @book.nil?
+    @people = [] if @people.nil?
+    @rentals = [] if @rentals.nil?
   end
 
   attr_accessor :books, :people, :rentals
@@ -105,3 +107,39 @@ class App
     end
   end
 end
+
+def save_data(data, file)
+  json = JSON.generate(data)
+  File.write("#{file}.json", json)
+end
+
+def recover_data(file)
+  return unless File.exist?("#{file}.json") == true
+
+  json = File.read("#{file}.json")
+  JSON.parse(json, create_additions: true)
+end
+
+store0 = Book.new('this is ethiopia', 'tadesse')
+json0 = JSON.generate(store0)
+obj0 = JSON.parse(json0)
+ruby1 = JSON.parse(json0, create_additions: true)
+
+store1 = Person.new(12, 'Marck', parent_permission: true)
+json1 = JSON.generate(store1)
+obj1 = JSON.parse(json1)
+ruby2 = JSON.parse(json1, create_additions: true)
+
+display = <<EOT
+  Generated JSON:
+    Without custom addition:  #{json0} (#{json0.class})
+    Without custom addition:  #{json1} (#{json1.class})
+    With addition:     #{json0} (#{json0.class})
+    With addition:     #{json1} (#{json1.class})
+  Parsed JSON:
+    Without custom addition:  #{obj0.inspect} (#{obj0.class})
+    With addition:     #{ruby1.inspect} (#{ruby1.class})
+    Without custom addition:  #{obj1.inspect} (#{obj1.class})
+    With addition:     #{ruby2.inspect} (#{ruby2.class})
+EOT
+puts display
