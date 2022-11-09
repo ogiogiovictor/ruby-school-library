@@ -3,7 +3,7 @@ require 'json'
 module LoadData
   # Create file path for json file
   def create_file(path)
-    #FileUtils.mkdir_p('data')
+    FileUtils.mkdir_p('data')
 
     File.open(path, 'w') do |file|
       file.puts JSON.generate([])
