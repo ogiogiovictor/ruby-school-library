@@ -25,6 +25,7 @@ def main
     app.create_rental if selected.to_i == 5
     app.list_all_rentals_for_person_id if selected.to_i == 6
     puts 'Thank you for using this app!' if selected.to_i == 7
+    app.save_json_data if selected.to_i == 7
     break if selected.to_i == 7
   end
 end
