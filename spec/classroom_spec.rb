@@ -1,5 +1,6 @@
 require_relative '../associations/classroom'
 
+# rubocop:disable Metrics/BlockLength
 describe Classroom do
   context 'Testing the class Classroom' do
     before :each do
@@ -19,3 +20,4 @@ describe Classroom do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
