@@ -35,3 +35,27 @@ describe '#Reverse' do
     end
   end
 end
+
+describe '#Fizzbuzz' do
+  before(:all) do
+    @value = Solver.new
+  end
+
+  context 'an argument and return a string' do
+    it 'number divissible by 3 and return "fizz"' do
+      expect(@value.fizzbuzz(3)).to eq('fizz')
+    end
+
+    it 'number divissible by 3 and return "buzz"' do
+      expect(@value.fizzbuzz(5)).to eq('buzz')
+    end
+
+    it 'number divissible by 3 and 5 return "fizzbuzz"' do
+      expect(@value.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+
+    it 'expects 7 to not be divisible by 3 or 5 and return "7"' do
+      expect(@value.fizzbuzz(7)).to eq('7')
+    end
+  end
+end
