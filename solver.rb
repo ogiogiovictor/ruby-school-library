@@ -10,7 +10,7 @@ class Solver
       end
       return answer
     end
-    'Not a valid number'
+    'Error'
   end
 
   def reverse(word)
