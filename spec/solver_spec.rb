@@ -15,7 +15,7 @@ describe '#Factorial' do
     end
 
     it 'factorial of negative number to be not valid' do
-      expect(@value.factorial(-5)).to eq('Not a valid number')
+      expect(@value.factorial(-5)).to eq('Error')
     end
   end
 end
