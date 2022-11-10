@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+# rubocop:disable Metrics/BlockLength
 describe Rental do
   context 'Testing the class Rental' do
     before :each do
@@ -18,3 +19,4 @@ describe Rental do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
