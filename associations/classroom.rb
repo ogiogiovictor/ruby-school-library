@@ -15,5 +15,5 @@ class Classroom
   end
 end
 
-stu = Classroom.new('John')
-p stu.add_student('John Vick')
+# stu = Classroom.new('John')
+# p stu.add_student('John Vick')
