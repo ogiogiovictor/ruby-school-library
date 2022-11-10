@@ -1,4 +1,4 @@
-require_relative '../classes/teacher'
+require 'spec_helper'
 
 describe Teacher do
   context 'Testing the class Teacher' do

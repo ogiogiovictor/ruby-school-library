@@ -1,6 +1,4 @@
-require_relative '../associations/rental'
-require_relative '../associations/book'
-require_relative '../classes/person'
+require 'spec_helper'
 
 describe Rental do
   context 'Testing the class Rental' do
