@@ -12,8 +12,9 @@ class Student < Person
   end
 
   def play_hooky
-    '¯(ツ)/¯'
+    '¯\(ツ)/¯'
   end
+
 end
 
 # student = Student.new(35, 17, 'Daniel', parent_permission: true, classroom: 'Math')
