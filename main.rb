@@ -7,10 +7,11 @@ def choose_options
   @options.each { |key, value| puts "#{key} - #{value}\n" }
 end
 
+# rubocop:disable Metrics/PerceivedComplexity
 # rubocop:disable Metrics/CyclomaticComplexity
 def main
   app = App.new
-  puts 'Welcome to School Library App!'
+  puts 'Welcome to Ruby School Library App!'
   puts "\n"
 
   loop do
@@ -24,7 +25,10 @@ def main
     app.create_rental if selected.to_i == 5
     app.list_all_rentals_for_person_id if selected.to_i == 6
     puts 'Thank you for using this app!' if selected.to_i == 7
+    app.save_json_data if selected.to_i == 7
+    break if selected.to_i == 7
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
 main

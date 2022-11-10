@@ -2,12 +2,20 @@ require_relative './associations/book'
 require_relative './classes/person'
 require_relative './classes/student'
 require_relative './classes/teacher'
+require_relative './presevedata/book'
+require_relative './presevedata/person'
+require_relative './presevedata/rental'
+require_relative './preserve_data'
+require_relative './presevedata/load_data'
 
 class App
+  include LoadData
+
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @books = fetch_books
+    @people = fetch_people
+    @rentals = [] if @rentals.nil?
+    # @rentals = fetch_rentals
   end
 
   attr_accessor :books, :people, :rentals
@@ -48,9 +56,9 @@ class App
   def create_person
     puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     option = gets.chomp
-    puts 'Age: '
+    puts 'Enter Age: '
     age = gets.chomp.to_i
-    puts 'Name: '
+    puts 'Enter Name: '
     name = gets.chomp.to_s
     case option
     when '1'
@@ -103,5 +111,11 @@ class App
         puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
       end
     end
+  end
+
+  def save_json_data
+    save_book(@books)
+    save_person(@people)
+    save_rentals(@rentals)
   end
 end
