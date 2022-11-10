@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# rubocop:disable Metrics/BlockLength
 describe Teacher do
   context 'Testing the class Teacher' do
     before :each do
@@ -22,4 +21,3 @@ describe Teacher do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
