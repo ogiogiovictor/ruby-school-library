@@ -13,5 +13,5 @@ end
 
 # Path: decorator\decorator.rb
 # Compare this snippet from methods\person.rb:
-decorate = Decorator.new('John')
-p decorate.correct_name
+# decorate = Decorator.new('John')
+# p decorate.correct_name
